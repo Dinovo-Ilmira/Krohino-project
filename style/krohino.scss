@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@700&family=Raleway:wght@400;500&display=swap');
+
+$main-color: rgb(144, 227, 241);
+$accent-color: rgb(49, 161, 179);
+
+body {
+    max-width: 100%;
+
+    @media (max-width: 480px) {
+        height: 60vh;
+    }
+}
+
+.header {
+    display: flex;
+    background-color: $main-color;
+    height: 20vh;
+    justify-content: flex-end;
+    padding: 0 10% 0 10%;
+    align-items: center;
+    border-bottom: 3px solid #151414;
+
+    @media (max-width: 480px) {
+        padding: 0 5% 0 5%;
+    }
+
+    .header__menu {
+        margin-right: 10%;
+
+        @media (max-width: 480px) {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            order: -1;
+            justify-self: flex-start;
+            a:not(:first-child) {
+                display: none;
+            }
+        }
+    }
+}
+
+.menu__link {
+    color: #124713;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Dancing Script', cursive;
+    margin: 1rem;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.general {
+    background-image: url(/img/general/DSC08710.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .general__title {
+        font-family: 'Dancing Script', cursive;
+        color: $accent-color;
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .general__text {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        font-family: 'Dancing Script', cursive;
+        color: rgb(161, 215, 224);
+        line-height: 1.5;
+
+        @media (max-width: 768px) {
+            margin: 0.5rem;
+        }
+    }
+}
+
+.excursion {
+    font-family: 'Dancing Script', cursive;
+    background-color: $main-color;
+    height: 730px;
+    color: #124713;
+
+    .excursion__title {
+        text-align: center;
+        padding-top: 2.2rem;
+    }
+
+    .excursion__text {
+        text-align: center;
+    }
+
+    .excursion__info {
+        text-align: center;
+    }
+
+    &__photos {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        height: 320px;
+
+        img {
+            margin-top: 2rem;
+            margin-right: 1rem;
+            max-width: 100%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .excursion__photos {
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                margin-top: 2rem;
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.volunteering {
+    font-family: 'Dancing Script', cursive;
+    background-color: $main-color;
+    height: 730px;
+    color: #124713;
+
+    .volunteering__title {
+        text-align: center;
+        padding-top: 2.2rem;
+    }
+
+    .volunteering__text {
+        text-align: center;
+    }
+
+    .volunteering__tit {
+        text-align: center;
+    }
+
+    .volunteering__info {
+        text-align: center;
+    }
+
+    &__photos {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        height: 320px;
+
+        img {
+            margin-top: 2rem;
+            margin-right: 1rem;
+            max-width: 100%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .volunteering__photos {
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                margin-top: 2rem;
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.swamp {
+    font-family: 'Dancing Script', cursive;
+    color: $main-color;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 3rem;
+
+    .swamp__title {
+        font-family: 'Dancing Script', cursive;
+        color: rgb(43, 173, 193);
+        text-align: center;
+    }
+
+    .swamp__text {
+        font-family: 'Dancing Script', cursive;
+        color: rgb(37, 95, 104);
+    }
+
+    .swamp__life {
+        font-family: 'Dancing Script', cursive;
+        color: rgb(43, 173, 193);
+        text-align: center;
+    }
+
+    .swamp__tag {
+        font-family: 'Dancing Script', cursive;
+        color: rgb(37, 95, 104);
+    }
+
+    .swamp__set {
+        font-family: 'Dancing Script', cursive;
+        color: rgb(43, 173, 193);
+        text-align: center;
+    }
+
+    .swamp__tagg {
+        font-family: 'Dancing Script', cursive;
+        color: rgb(37, 95, 104);
+    }
+
+    .swamp__info {
+        font-family: 'Dancing Script', cursive;
+        color: rgb(21, 91, 102);
+        text-align: center;
+        padding-top: 2rem;
+    }
+
+    &__photos {
+        flex: 0 0 30%;
+        display: flex;
+        flex-direction: column;
+
+        img {
+            margin-bottom: 1rem;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    &__content {
+        flex: 0 0 65%;
+        padding: 0 2rem;
+        text-align: left;
+        padding-top: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+        .swamp__content {
+            text-align: center;
+        }
+    }
+}
+
+.dinner {
+    font-family: 'Dancing Script', cursive;
+    height: 730px;
+
+    .dinner__title {
+        text-align: center;
+        padding-top: 2.2rem;
+        color: rgb(65, 176, 196);
+    }
+
+    .dinner__text {
+        text-align: center;
+        line-height: 2.5;
+        margin-top: 2rem;
+        margin-left: 15rem;
+        margin-right: 5rem;
+        color: rgb(43, 90, 98);
+    }
+
+    .dinner__photo {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        height: 420px;
+
+        img {
+            margin-top: 5rem;
+            max-width: 100%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .dinner__text {
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+    }
+}
+
+.event {
+    font-family: 'Dancing Script', cursive;
+    background-color: $main-color;
+    height: 530px;
+    color: #124713;
+    text-align: center;
+    padding-top: 3rem;
+
+    .volunteering__title {
+        text-align: center;
+        padding-top: 3.2rem;
+    }
+
+    .volunteering__text {
+        text-align: center;
+    }
+
+    .event__photos {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        height: 320px;
+
+        img {
+            margin-top: 2rem;
+            margin-right: 1rem;
+            max-width: 100%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .event__photos {
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                margin-top: 2rem;
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+    .contact__info {
+        flex: 1;
+        margin-top: 2rem;
+        margin-left: 10rem;
+        margin-right: 10rem;
+        line-height: 3rem;
+        font-family: 'Dancing Script', cursive;
+        color: rgb(49, 161, 179);
+    }
+
+    .contact__map {
+        flex: 1;
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+
+        .contact__info {
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+    }
+}
+
+.footer {
+    display: flex;
+    background-color: $main-color;
+    height: 20vh;
+    justify-content: flex-end;
+    padding: 0 10% 0 10%;
+    align-items: center;
+    border-top: 3px solid #151414;
+
+    @media (max-width: 480px) {
+        height: 60vh;
+        padding: 0 5% 0 5%;
+    }
+
+    .footer__button {
+        background-color: $main-color;
+        border: 2px solid #000000;
+        padding: 10px 20px;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+
+    .footer__button a {
+        text-decoration: none;
+        color: #124713;
+    }
+
+    .footer__button:hover {
+        background-color: #3f6cbb;
+    }
+
+    .footer__button a:hover {
+        color: rgb(167, 218, 167);
+    }
+
+    .footer__social {
+        margin-left: auto;
+
+        @media (max-width: 480px) {
+            margin: 0;
+        }
+    }
+}
